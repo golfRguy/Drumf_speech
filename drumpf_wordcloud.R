@@ -1,6 +1,6 @@
---------------------------------
-
-packs <-c("tm", "wordcloud")
+# Load packages------------------------------------------------------------
+# load 
+packs <-c("tm", "wordcloud", "dplyr", "rvest, "RcolorBrewer")
 lapply(packs, require, character.only = TRUE)
 
 # Load the speech----------------------------------------------------------
@@ -42,11 +42,10 @@ freqs <- sort(rowSums(my_tdm_mat), decreasing = TRUE)
 # The order of the words in the plot is random, 
 # so setting the seed lets you recreate the same plot
 # if you don't like the look, rerun wordcloud without
-# resetting the seed
+# resetting the seed or change the random order option
 
 set.seed(1225)
- library(RColorBrewer)
- 
+
  palette <- brewer.pal(n = 4, name = "PRGn")
  
  png("drumf_wordcloud.png", width=5,height=5, units='in', res=300)
