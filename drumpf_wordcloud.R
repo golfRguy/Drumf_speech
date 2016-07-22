@@ -1,5 +1,4 @@
 # Load packages------------------------------------------------------------
-# load 
 packs <-c("tm", "wordcloud", "dplyr", "rvest, "RcolorBrewer")
 lapply(packs, require, character.only = TRUE)
 
